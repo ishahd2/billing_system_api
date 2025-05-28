@@ -57,7 +57,6 @@ A simple yet scalable billing system built with Laravel, designed to handle cust
 ## 🔐 Authentication
 Authentication is handled via Laravel Sanctum. After registering or logging in, use the returned token in the Authorization header:
 
-    ```bash
     Authorization: Bearer YOUR_TOKEN
 
 
