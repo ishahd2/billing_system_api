@@ -47,7 +47,12 @@ class RegisteredUserController extends Controller
         return response()->json([
             'access_token' => $token,
             'token_type' => 'Bearer',
-            'user' => $user
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+            ],
+            'status' => 'Login successful',
         ]);
     }
 }

@@ -13,7 +13,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-class AuthenticatedSessionController extends Controller
+class AuthenticationController extends Controller
 {
     /**
      * Handle an incoming authentication request.
@@ -42,7 +42,11 @@ class AuthenticatedSessionController extends Controller
         return response()->json([
             'access_token' => $token,
             'token_type' => 'Bearer',
-            'user' => $user,
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+            ],
             'status' => 'Login successful',
         ]);
     }
@@ -54,6 +58,6 @@ class AuthenticatedSessionController extends Controller
     {
         $request->user()->currentAccessToken()->delete();
 
-        return response()->json(['message' => 'Logout successful']);
+        return response()->noContent();
     }
 }
