@@ -57,7 +57,6 @@ A simple yet scalable billing system built with Laravel, designed to handle cust
 ## 🔐 Authentication
 Authentication is handled via Laravel Sanctum. After registering or logging in, use the returned token in the Authorization header:
 
-    ```bash
     Authorization: Bearer YOUR_TOKEN
 
 
@@ -76,15 +75,10 @@ Authentication is handled via Laravel Sanctum. After registering or logging in, 
 
 
 ✅ To Do
- Add Feature & Unit Testing
+ - Add Feature & Unit Testing
+ - Improve error handling
+ - Add invoice PDF export
 
- Improve error handling
-
- Add invoice PDF export
-
- Add search & filter capabilities
-
- Deploy to a demo environment
 
 📫 Contact
 Feel free to reach out if you'd like to know more or suggest improvements.
