@@ -31,7 +31,6 @@ A simple yet scalable billing system built with Laravel, designed to handle cust
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/billing-system-api.git
-   cd billing-system-api
 
 2. Install dependencies:
     ```bash
